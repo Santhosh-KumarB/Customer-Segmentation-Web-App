@@ -43,18 +43,19 @@ PRODIGY_ML_02_APP
 └── README.md
 
 
----
-
-## ▶️ How to Run the App
-
-1. Install required libraries:
-
-2. Run the application:
-
-3. Open browser and visit:
 
 ---
 
-## 📌 Note
-This Flask application is an **extra showcase** implementation created in addition to the required Colab notebook for Task-02.
+## ▶️ How to Run the Application
 
+1. Install dependencies:
+
+pip install flask scikit-learn pandas
+
+2. Run the app:
+
+python app.py
+
+3. Open browser:
+   
+http://127.0.0.1:5000/
