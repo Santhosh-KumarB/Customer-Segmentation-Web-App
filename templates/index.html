@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Segmentation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>🧑‍🤝‍🧑 Customer Segmentation</h1>
+    <p>Enter customer details to identify the segment</p>
+
+    <form method="POST">
+        <input type="number" name="income" placeholder="Annual Income (k$)" required>
+        <input type="number" name="spending" placeholder="Spending Score (1-100)" required>
+
+        <button type="submit">Find Customer Segment</button>
+    </form>
+
+    {% if cluster is not none %}
+    <div class="result">
+        <h2>Customer Segment</h2>
+        <p><strong>Cluster:</strong> {{ cluster }}</p>
+        <p>{{ description }}</p>
+    </div>
+    {% endif %}
+</div>
+
+</body>
+</html>
